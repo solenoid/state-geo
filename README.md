@@ -59,3 +59,28 @@ npm run attempt3:svg
 
 the look back at https://github.com/veltman/d3-stateplane#nad83--massachusetts-mainland-epsg26986
 was worth it the projection looks like it's a bit better
+
+moving onto attemp4 with same better projection as attempt3 as a reference
+
+The census definitions are over in https://api.census.gov/data/2019/acs/acs5/variables.json
+
+probably gonna get this first like the article https://api.census.gov/data/2019/acs/acs5?get=B01003_001E&for=tract:*&in=state:25
+
+woah d3 being esm only in v7 threw a wrench in things so held it back to v6 which still supports require
+long related thread on the mess that is esm in node and how d3 just broke it in v7 is here
+https://github.com/d3/d3/issues/3469
+
+here's the command after they all got working and this is now through part 2 of the article
+
+```
+npm run attempt4:shp
+npm run attempt4:project
+npm run attempt4:nd-split
+npm run attempt4:nd-id
+npm run attempt4:nd-population
+npm run attempt4:join-population
+npm run attempt4:map-population
+npm run attempt4:map-population-color
+# npm run attempt4:population-debug
+npm run attempt4:svg
+```
