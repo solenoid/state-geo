@@ -10,6 +10,7 @@
   "private": true,
   "scripts": {
     "fetch:ma-school-districts": "./getData.sh GENZ2020/shp/cb_2020_25_unsd_500k.zip",
+    "fetch:ma-tracts": "./getData.sh GENZ2020/shp/cb_2020_25_tract_500k.zip",
     "attempt1:shp": "npx shp2json data/GENZ2020/shp/cb_2020_25_unsd_500k.shp -o ma1.json",
     "attempt1:project": "npx geoproject 'd3.geoConicEqualArea().parallels([41, 42]).rotate([71.5, 0]).fitSize([800, 500], d)' < ma1.json > ma1-albers.json",
     "attempt1:svg": "npx geo2svg -w 800 -h 500 < ma1-albers.json > ma1-albers.svg",
