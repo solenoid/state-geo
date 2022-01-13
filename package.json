@@ -16,7 +16,7 @@
     "attempt1:project": "npx geoproject 'd3.geoConicEqualArea().parallels([41, 42]).rotate([71.5, 0]).fitSize([800, 500], d)' < ma1.json > ma1-albers.json",
     "attempt1:svg": "npx geo2svg -w 800 -h 500 < ma1-albers.json > ma1-albers.svg",
     "attempt2:shp": "npx shp2json -n data/GENZ2020/shp/cb_2020_25_unsd_500k.shp | npx ndjson-filter 'd.properties.NAME !== \"Nantucket School District\"' > ma2.ndjson",
-    "attempt2:shpjoin": "npx ndjson-reduce < ma2.ndjson > ma2.json",
+    "attempt2:shpjoin": "npx ndjson-reduce 'p.features.push(d), p' '{type: \"FeatureCollection\", features: []}' < ma2.ndjson > ma2.json",
     "attempt2:project": "npx geoproject 'd3.geoConicConformal().parallels([41 + 43 / 60, 42 + 41 / 60]).rotate([70 + 30 / 60, 0]).fitSize([800, 500], d)' < ma2.json > ma2-albers.json",
     "attempt2:svg": "npx geo2svg -w 800 -h 500 < ma2-albers.json > ma2-albers.svg",
     "attempt3:shp": "npx shp2json data/GENZ2020/shp/cb_2020_25_tract_500k.shp > ma3.json",

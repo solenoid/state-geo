@@ -34,7 +34,7 @@ found https://www.npmjs.com/package/ndjson-cli/v/0.0.3 before i saw it in a late
 
 attempt2 failed due to missing outer object and just having the array of interesting things which made
 later phases after the ndjson not work as needed turning into null if it would have worked this would
-have been the commands needed probably
+have been the commands needed probably. update after attempt4 this is fixed now and works
 
 ```
 npm run attempt2:shp
