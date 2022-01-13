@@ -18,6 +18,9 @@
     "attempt2:shpjoin": "npx ndjson-reduce < ma2.ndjson > ma2.json",
     "attempt2:project": "npx geoproject 'd3.geoConicConformal().parallels([41 + 43 / 60, 42 + 41 / 60]).rotate([70 + 30 / 60, 0]).fitSize([800, 500], d)' < ma2.json > ma2-albers.json",
     "attempt2:svg": "npx geo2svg -w 800 -h 500 < ma2-albers.json > ma2-albers.svg",
+    "attempt3:shp": "npx shp2json data/GENZ2020/shp/cb_2020_25_tract_500k.shp > ma3.json",
+    "attempt3:project": "npx geoproject 'd3.geoConicConformal().parallels([41 + 43 / 60, 42 + 41 / 60]).rotate([70 + 30 / 60, 0]).fitSize([800, 500], d)' < ma3.json > ma3-albers.json",
+    "attempt3:svg": "npx geo2svg -w 800 -h 500 < ma3-albers.json > ma3-albers.svg",
     "test": "echo nope"
   },
   "dependencies": {

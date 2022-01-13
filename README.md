@@ -32,8 +32,6 @@ thought i needed to "get rid of nantucket" because for some reason it's in bosto
 
 found https://www.npmjs.com/package/ndjson-cli/v/0.0.3 before i saw it in a later article
 
-TODO look back at https://github.com/veltman/d3-stateplane#nad83--massachusetts-mainland-epsg26986 as opposed to my guess on stuff for parallels
-
 attempt2 failed due to missing outer object and just having the array of interesting things which made
 later phases after the ndjson not work as needed turning into null if it would have worked this would
 have been the commands needed probably
@@ -50,3 +48,14 @@ and turned out nantucket wasn't the problem it was provinetown w/o a rest of the
 put down attempt2 as a fail
 
 moving on to attempt3 and trying out a new dataset
+
+settled on tracts
+
+```
+npm run attempt3:shp
+npm run attempt3:project
+npm run attempt3:svg
+```
+
+the look back at https://github.com/veltman/d3-stateplane#nad83--massachusetts-mainland-epsg26986
+was worth it the projection looks like it's a bit better
